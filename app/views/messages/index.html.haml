@@ -1,0 +1,23 @@
+#banner
+  = image_tag "spoof.png"
+- form_for(@message) do |f|
+  = f.error_messages
+  %h3 Share your thoughts about the Chevy Volt.
+  %p
+    = f.label :name
+    = f.text_field :name
+  %p 
+    = f.label :message
+    = f.text_area :message, :rows => 5
+  .pad
+    = recaptcha_tags
+  %p
+    = f.submit 'Post message'
+%h3 Recent messages
+- @messages.each do |message|
+  %p
+    %b
+      = h message.name
+    = "(" + message.created_at.strftime("%B %d, %Y") + "):"
+    = auto_link ((h message.message), :link => :urls)
+= will_paginate @messages

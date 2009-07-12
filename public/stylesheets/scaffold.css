@@ -1,0 +1,76 @@
+.fieldWithErrors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#errorExplanation {
+  width: 400px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#errorExplanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  background-color: #c00;
+  color: #fff;
+}
+
+#errorExplanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 5px;
+}
+
+#errorExplanation ul li {
+  font-size: 12px;
+  list-style: square;
+  list-style-position: inside;
+}
+
+body {
+  color: #333;
+}
+
+#banner {
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-bottom: .2em;
+  font-weight: bold;
+}
+
+p {
+  padding: .5em 0;
+}
+
+.pad {
+  padding: 1em 0;
+}
+
+h3 {
+  font-weight: bold;
+  font-size: 123.1%;
+  color: #fff;
+  background: #228B22;
+  padding: .3em .5em;
+  margin-bottom: 1em;
+}
+
+#new_message {
+  margin-bottom: 1em;
+}
+
+.clear {
+  clear: both;
+}

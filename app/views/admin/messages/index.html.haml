@@ -1,0 +1,26 @@
+%h1
+  Listing messages
+%table
+  %tr
+    %th
+      Name
+    %th
+      Message
+  - @messages.each do |message|
+    %tr
+      %td
+        = h message.name
+      %td
+        = h message.message
+      %td
+        = link_to 'Show', message
+      %td
+        = link_to 'Edit', edit_message_path(message)
+      %td
+        = link_to 'Destroy', [:admin,message], :confirm => 'Are you sure?', :method => :delete
+      %td
+        - form_for([:admin,message]) do |f|
+          = f.submit (message.is_approved == 0 ? 'Approve' : 'Unapprove')
+      %td
+        = message.is_approved
+= will_paginate @messages
