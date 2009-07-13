@@ -33,7 +33,7 @@ class MessagesController < ApplicationController
     @message = Message.new(params[:message])
     respond_to do |format|
       if @message.save && verify_recaptcha(:model => @message)
-        flash[:notice] = 'Message posted.'
+        flash[:notice] = 'Thank you! Message posted. Awaiting approval...'
         format.html { redirect_to root_url }
         format.xml  { render :xml => @message, :status => :created, :location => @message }
       else
