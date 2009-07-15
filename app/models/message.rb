@@ -7,5 +7,5 @@ class Message < ActiveRecord::Base
   validates_presence_of :subject
   validates_length_of :name, :maximum => 30
   validates_length_of :subject, :maximum => 80
-  validates_length_of :message, :maximum => 255
+  validates_length_of :message, :maximum => 500
 end
