@@ -9,7 +9,7 @@ class Admin::MessagesController < ApplicationController
   end
   
   def index
-    @messages = Message.paginate :page => params[:page], :per_page => 2, :order => 'created_at DESC' 
+    @messages = Message.paginate :page => params[:page], :per_page => 100, :order => 'created_at DESC' 
 
     respond_to do |format|
       format.html # index.html.erb
@@ -59,7 +59,7 @@ class Admin::MessagesController < ApplicationController
     @message.destroy
 
     respond_to do |format|
-      format.html { redirect_to(messages_url) }
+      format.html { redirect_to(admin_messages_url) }
       format.xml  { head :ok }
     end
   end

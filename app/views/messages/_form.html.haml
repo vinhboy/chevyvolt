@@ -1,0 +1,20 @@
+- form_for(@message) do |f|
+  %h3 Share your thoughts about the Chevy Volt.
+  = f.error_messages  
+  %table
+    %tr      
+      %td.firstcol
+        .pad
+          = f.label :name
+          = f.text_field :name
+        .pad
+          = recaptcha_tags    
+      %td
+        .pad
+          = f.label :subject
+          = f.text_field :subject, :size => 80
+        .pad
+          = f.label :message
+          = f.text_area :message, :rows => 8, :cols => 80
+  %p
+    = f.submit 'Post message'

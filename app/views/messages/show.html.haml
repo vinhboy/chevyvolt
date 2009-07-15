@@ -1,0 +1,12 @@
+%p
+  %b Subject:
+  =h @message.subject
+%p
+  %b Message:
+  =h @message.message
+%p
+  %b By:
+  =h @message.name
+  on
+  = @message.created_at.strftime("%B %d, %Y")
+= link_to 'Back to homepage', root_path

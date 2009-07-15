@@ -1,3 +1,4 @@
+= stylesheet_link_tag "table"
 %h1
   Listing messages
 %table
@@ -5,11 +6,17 @@
     %th
       Name
     %th
+      Subject
+    %th
       Message
+    %th{:colspan => 4}
+      Action
   - @messages.each do |message|
     %tr
       %td
         = h message.name
+      %td
+        = h message.subject
       %td
         = h message.message
       %td
@@ -21,6 +28,6 @@
       %td
         - form_for([:admin,message]) do |f|
           = f.submit (message.is_approved == 0 ? 'Approve' : 'Unapprove')
-      %td
-        = message.is_approved
 = will_paginate @messages
+%p
+  = link_to "Back", root_path

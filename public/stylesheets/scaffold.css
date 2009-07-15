@@ -19,6 +19,7 @@
   padding: 5px 5px 5px 15px;
   font-size: 12px;
   margin: -7px;
+  margin-bottom: 0;
   background-color: #c00;
   color: #fff;
 }
@@ -26,7 +27,7 @@
 #errorExplanation p {
   color: #333;
   margin-bottom: 0;
-  padding: 5px;
+  padding: 5px 0;
 }
 
 #errorExplanation ul li {
@@ -56,11 +57,18 @@ p {
 }
 
 .pad {
-  padding: 1em 0;
+  padding-bottom: 1em;
+}
+
+td {
+  vertical-align: top;
+}
+
+.firstcol {
+  padding-right: 30px;
 }
 
 h3 {
-  font-weight: bold;
   font-size: 123.1%;
   color: #fff;
   background: #228B22;
