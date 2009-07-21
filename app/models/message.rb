@@ -10,6 +10,6 @@ class Message < ActiveRecord::Base
   validates_length_of :message, :maximum => 500
   
   def to_param
-    "#{id}-#{subject.parameterize}" unless subject.blank?
+    "#{id}-#{subject.parameterize}" unless subject.nil?
   end
 end
