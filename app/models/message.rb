@@ -1,5 +1,5 @@
 class Message < ActiveRecord::Base
-  
+
   attr_accessible :name, :message, :subject
   
   validates_presence_of :name
@@ -8,4 +8,8 @@ class Message < ActiveRecord::Base
   validates_length_of :name, :maximum => 30
   validates_length_of :subject, :maximum => 80
   validates_length_of :message, :maximum => 500
+  
+  def to_param
+    "#{id}-#{subject.parameterize}"
+  end
 end
